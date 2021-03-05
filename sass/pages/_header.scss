@@ -1,0 +1,27 @@
+.header {
+    height: 100vh;
+    background: url('../../img/background.jpg');
+    background-size: cover;
+    background-position: top;
+
+    position: relative;
+
+    &__content {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: #fff;
+        text-transform: uppercase;
+
+        &--title {
+            font-size: 5rem;
+            animation: moveInLeft 2s ease-in-out;
+        }
+
+        &--text {
+            animation: moveInRight 2s ease-in-out;
+        }
+    }
+}

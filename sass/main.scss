@@ -1,14 +1,6 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
-@import "base/feature-box";
-
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/navigation";
+@import './global';
+@import './pages/header';
+@import './pages/section';
+@import './components/pokemonCard';
+@import './components/responsive';
+@import './components/animations';

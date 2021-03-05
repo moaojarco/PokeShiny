@@ -1,12 +1,10 @@
 'use strict';
 
-const btn = document.querySelector('.btn-random');
-const pokemonContainer = document.querySelector('.pokemon__container')
-const input = document.querySelector('input')
-const pokemonList = document.querySelector('.row')
-const pokemonBox = document.querySelector('.feature-box')
-const pokemonItem = document.querySelector('.pokemon-item')
-const pokemonNew = document.querySelector('.pokemon-new')
+const pokemonContainer = document.querySelector('.pokemons-container');
+const input = document.querySelector('.input');
+const btn = document.querySelector('.btn');
+const mainSection = document.querySelector('.main');
+
 
 
 const renderPokemon = async function (pokemon) {
@@ -25,7 +23,7 @@ const renderPokemon = async function (pokemon) {
     console.log(myPokemonNameUpper);
     
     const html = `
-    <div class="col-1-of-4">
+    <div class="pokemon-card">
         <div class="feature-box">
             <h3 class="heading-tertiary u-margin-bottom-small">${myPokemonNameUpper}</h3>
             <div class="pokemons-img">
@@ -42,7 +40,7 @@ const renderPokemon = async function (pokemon) {
         </div>
     </div>
     `;
-    pokemonList.insertAdjacentHTML('beforeend', html);
+    pokemonContainer.insertAdjacentHTML('beforeend', html);
 };
 
 btn.addEventListener('click', function() {
@@ -50,4 +48,6 @@ btn.addEventListener('click', function() {
     const myPokemonLower = myPokemon.toLowerCase();
     // pokemonBox.innerHTML = '';
 	renderPokemon(myPokemonLower);
+
+    mainSection.style.height = '500px';
 })

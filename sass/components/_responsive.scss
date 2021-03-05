@@ -1,0 +1,11 @@
+@media only screen and (max-width: 415px) {
+    .header__content--title {font-size: 3rem;}
+    .header__content--text {margin-bottom: 50px}
+
+    .pokemons-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .pokemon-card {width: auto}
+}

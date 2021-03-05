@@ -1,146 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__content--title">PokéShiny</h1>
+            <p class="header__content--text">See your favorite Pokémon</p>
+        </div>
+    </header>
+    <main class="main">
+        <div class="tools">
+            <input class="input" type="text">
+            <button class="btn">Your Pokémon</button>
+        </div>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <div class="pokemons-container">
+            <!-- <div class="pokemon-card">
+                <h3>Pokémon Teste</h3>
+                <img src="#" alt="">
+                <img src="#" alt="">
+            </div> -->
+        </div>
 
-        <link rel="stylesheet" href="css/icon-font.css">
-        <link rel="stylesheet" href="sass/main.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        <script defer src="./js/script.js"></script>
-        <title>PokéShiny | See your favorite pokémon sprite (normal/shiny)</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">PokéShiny</span>
-                    <span class="heading-primary--sub">see your favorite pokémon</span>
-                </h1>
-            </div>
+    </main>
 
-            <section class="section-features">
-                <div class="buttons">
-                    <input type="text">
-                    <button class="btn btn-random">Your Pokémon</button>
-                </div>
-                <div class="row">
-                    <!-- <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-compass"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-map"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
-                             <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-heart"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
-                            <p class="feature-box__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-                            </p>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
-        </header>
-            
-
-        <!--
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-2-of-3">
-                    Col 2 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-2-of-4">
-                    Col 2 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-3-of-4">
-                    Col 3 of 4
-                </div>
-            </div>
-        </section>
-        -->
-
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
