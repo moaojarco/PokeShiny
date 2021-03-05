@@ -1,5 +1,6 @@
 .main {
     background: rgb(152, 197, 141);
+    height: 400px;
 }
 
 .pokemons-container {
@@ -9,10 +10,13 @@
 .input {
     padding: 10px;
     margin-top: 20px ;
+    border: 0;
 }
 
 .btn {
-    background: rgb(38, 138, 38);
+    background: rgb(138, 203, 226);
+    border: 0;
+    border-radius: 5px;
     padding: 10px;
     cursor: pointer;
 }

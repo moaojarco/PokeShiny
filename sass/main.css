@@ -39,8 +39,16 @@ body {
           animation: moveInRight 2s ease-in-out;
 }
 
+.arrow {
+  width: 40px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+}
+
 .main {
   background: #98c58d;
+  height: 400px;
 }
 
 .pokemons-container {
@@ -52,10 +60,13 @@ body {
 .input {
   padding: 10px;
   margin-top: 20px;
+  border: 0;
 }
 
 .btn {
-  background: #268a26;
+  background: #8acbe2;
+  border: 0;
+  border-radius: 5px;
   padding: 10px;
   cursor: pointer;
 }
