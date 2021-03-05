@@ -48,7 +48,11 @@ body {
 
 .main {
   background: #98c58d;
+<<<<<<< HEAD
   height: 400px;
+=======
+  height: 800px;
+>>>>>>> 3089b38d2cce61354ab7a5cc7c77726e07b9d062
 }
 
 .pokemons-container {
