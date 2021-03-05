@@ -102,7 +102,11 @@ body {
     width: auto;
   }
   .arrow {
-    bottom: 20%;
+    bottom: 30%;
+    left: 45%;
+  }
+  .main {
+    height: 500px;
   }
 }
 
