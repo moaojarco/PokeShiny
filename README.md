@@ -3,4 +3,4 @@
 
 <img src="https://media.giphy.com/media/UlsDqjRSOxPL96WcJi/giphy.gif" alt="mygif">
 
-<p align="center"> Made with 💚 by: João Marco </p>
+<p align="center"> 💚 by: João Marco </p>
