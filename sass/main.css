@@ -114,9 +114,9 @@ body {
 .pokemon-card {
   background: #eee;
   width: 15rem;
-  padding: 20px;
+  padding: 1.225rem;
   text-align: center;
-  margin: 12px;
+  margin: 1rem;
 }
 
 @media only screen and (max-width: 415px) {
