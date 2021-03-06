@@ -44,10 +44,20 @@ const renderPokemon = async function (pokemon) {
     pokemonContainer.insertAdjacentHTML('beforeend', html);
 };
 
-btn.addEventListener('click', function() {
-    const myPokemon = input.value;
-    const myPokemonLower = myPokemon.toLowerCase();
-    // pokemonBox.innerHTML = '';
-    renderPokemon(myPokemonLower);
-    mainSection.style.height = '500px'; 
-})
+
+const displayPokemon = () => {
+        const myPokemon = input.value;
+        const myPokemonLower = myPokemon.toLowerCase();
+        // pokemonBox.innerHTML = '';
+        renderPokemon(myPokemonLower);
+        mainSection.style.height = '500px'; 
+}
+
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        e.preventDefault();
+        btn.click();
+    } else {
+        btn.addEventListener('click', displayPokemon);
+    }
+});
