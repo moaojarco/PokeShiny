@@ -23,9 +23,11 @@ const renderPokemon = async function (pokemon) {
     console.log(myPokemonNameUpper);
     
     const html = `
-    <div class="pokemon-card ${currentPokemon.types[0].type.name}">
+    <div class="pokemon-card ${currentPokemon.types[0].type.name}" onclick="remove(this)">
         <div class="feature-box">
-            <h3 class="heading-tertiary u-margin-bottom-small">${myPokemonNameUpper}</h3>
+        <div class="feature-box-top">
+        <h3 class="heading-tertiary u-margin-bottom-small">${myPokemonNameUpper}</h3>
+        </div>
             <div class="pokemons-img">
                 <img src="${currentPokemon.sprites.front_default}">
                 <img src="${currentPokemon.sprites.front_shiny}">
@@ -52,6 +54,11 @@ const displayPokemon = () => {
         renderPokemon(myPokemonLower);
         mainSection.style.height = '500px'; 
 }
+
+function remove(el) {
+    const element = el;
+    element.remove();
+  }
 
 input.addEventListener('keyup', (e) => {
     if(e.keyCode === 13) {
