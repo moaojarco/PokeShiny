@@ -121,6 +121,10 @@ body {
 }
 
 @media only screen and (max-width: 415px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header__content--title {
     font-size: 3rem;
   }
@@ -138,11 +142,15 @@ body {
     width: auto;
   }
   .arrow {
-    bottom: 20%;
-    left: 30%;
+    bottom: 10%;
+    left: 45%;
   }
   .main {
     height: 500px;
+  }
+
+  .tools {
+    width: 320px;
   }
 }
 
