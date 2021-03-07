@@ -47,7 +47,10 @@ const renderPokemon = async function (pokemon) {
         pokemonContainer.insertAdjacentHTML('beforeend', html);
     } catch {
         const html = `
-            <p onclick="remove(this)">Este pokémon não existe!</p>
+            <div onclick="remove(this)" class="not-found">
+            <p>Este pokémon não existe!</p>
+            <span class="close">x</span>
+            </div>
         `
         pokemonContainer.insertAdjacentHTML('beforeend', html);
     }

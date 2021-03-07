@@ -117,6 +117,7 @@ body {
   padding: 1.225rem;
   text-align: center;
   margin: 1rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 415px) {
@@ -307,3 +308,13 @@ body {
   background-color: #D685AD70;
 }
 /*# sourceMappingURL=main.css.map */
+
+.not-found {
+  display: flex;
+}
+
+.close {
+  cursor: pointer;
+  padding: 1px;
+  color: red;
+}
