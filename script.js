@@ -46,7 +46,10 @@ const renderPokemon = async function (pokemon) {
         `;
         pokemonContainer.insertAdjacentHTML('beforeend', html);
     } catch {
-        pokemonContainer.insertAdjacentHTML('beforeend', 'Este pokémon não existe!');
+        const html = `
+            <p onclick="remove(this)">Este pokémon não existe!</p>
+        `
+        pokemonContainer.insertAdjacentHTML('beforeend', html);
     }
 	
 };
