@@ -8,42 +8,47 @@ const mainSection = document.querySelector('.main');
 const pokemonType = document.querySelector('.pokemon-type');
 
 const renderPokemon = async function (pokemon) {
-	const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-    const data = await res.json();
-    let currentPokemon = data;
-    console.log(currentPokemon);
-    const currentPokemonHP = currentPokemon.stats[0].base_stat;
-    const currentPokemonATK = currentPokemon.stats[1].base_stat;
-    const currentPokemonDEF = currentPokemon.stats[2].base_stat;
-    const currentPokemonSpeed = currentPokemon.stats[5].base_stat;
-    console.log(currentPokemonHP);
-    
-    const myPokemonName = currentPokemon.name;
-	const myPokemonNameUpper = myPokemonName.charAt(0).toUpperCase() + myPokemonName.slice(1);
-    console.log(myPokemonNameUpper);
-    
-    const html = `
-    <div class="pokemon-card ${currentPokemon.types[0].type.name}" onclick="remove(this)">
-        <div class="feature-box">
-        <div class="feature-box-top">
-        <h3 class="heading-tertiary u-margin-bottom-small">${myPokemonNameUpper}</h3>
-        </div>
-            <div class="pokemons-img">
-                <img src="${currentPokemon.sprites.front_default}">
-                <img src="${currentPokemon.sprites.front_shiny}">
+    try {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+        const data = await res.json();
+        let currentPokemon = data;
+        console.log(currentPokemon);
+        const currentPokemonHP = currentPokemon.stats[0].base_stat;
+        const currentPokemonATK = currentPokemon.stats[1].base_stat;
+        const currentPokemonDEF = currentPokemon.stats[2].base_stat;
+        const currentPokemonSpeed = currentPokemon.stats[5].base_stat;
+        console.log(currentPokemonHP);
+        
+        const myPokemonName = currentPokemon.name;
+        const myPokemonNameUpper = myPokemonName.charAt(0).toUpperCase() + myPokemonName.slice(1);
+        console.log(myPokemonNameUpper);
+        
+        const html = `
+        <div class="pokemon-card ${currentPokemon.types[0].type.name}" onclick="remove(this)">
+            <div class="feature-box">
+            <div class="feature-box-top">
+            <h3 class="heading-tertiary u-margin-bottom-small">${myPokemonNameUpper}</h3>
             </div>
-            <p class="feature-box__text">
-                HP: ${currentPokemonHP} /
-                ATK: ${currentPokemonATK}
-                <br>
-                DEF: ${currentPokemonDEF} /
-                SPEED: ${currentPokemonSpeed} <br>
-                <p class="pokemon-type">Type: ${currentPokemon.types[0].type.name.toUpperCase()}</p>
-            </p>
+                <div class="pokemons-img">
+                    <img src="${currentPokemon.sprites.front_default}">
+                    <img src="${currentPokemon.sprites.front_shiny}">
+                </div>
+                <p class="feature-box__text">
+                    HP: ${currentPokemonHP} /
+                    ATK: ${currentPokemonATK}
+                    <br>
+                    DEF: ${currentPokemonDEF} /
+                    SPEED: ${currentPokemonSpeed} <br>
+                    <p class="pokemon-type">Type: ${currentPokemon.types[0].type.name.toUpperCase()}</p>
+                </p>
+            </div>
         </div>
-    </div>
-    `;
-    pokemonContainer.insertAdjacentHTML('beforeend', html);
+        `;
+        pokemonContainer.insertAdjacentHTML('beforeend', html);
+    } catch {
+        pokemonContainer.insertAdjacentHTML('beforeend', 'Este pokémon não existe!');
+    }
+	
 };
 
 
