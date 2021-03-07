@@ -311,10 +311,17 @@ body {
 
 .not-found {
   display: flex;
+  background-color: #eee;
+  padding: 10px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.not-found-text {
 }
 
 .close {
-  cursor: pointer;
   padding: 1px;
   color: red;
 }
