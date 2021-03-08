@@ -150,7 +150,7 @@ body {
   }
 
   .tools {
-    width: 320px;
+    width: 360px;
   }
 }
 
@@ -324,12 +324,4 @@ body {
   height: 40px;
   cursor: pointer;
   margin-top: 10px;
-}
-
-.not-found-text {
-}
-
-.close {
-  padding: 1px;
-  color: red;
 }
